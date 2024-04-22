@@ -64,7 +64,7 @@ public class Communication {
 
         httpHeaders.add("Cookie", cookies);
         HttpEntity<User> requestEntity = new HttpEntity<>(user, httpHeaders);
-        
+
         ResponseEntity<String> responseEntity = restTemplate.exchange(URL + "/" + id, HttpMethod.DELETE, requestEntity, String.class);
 
         resultContent.append(responseEntity.getBody());
